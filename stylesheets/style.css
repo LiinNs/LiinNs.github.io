@@ -21,10 +21,10 @@
     div#comments ol li article header h3 + p { padding:0 0 0 20%; }
     
   p.copyright,
-  .primary h2,
-  .primary p,
-  .primary .fusionentire { color:rgba(0,0,0,0.3);}
-  .primary .fusionentire img {max-width: 200px;}
+  .sidenav h2,
+  .sidenav p,
+  .sidenav .fusionentire { color:rgba(0,0,0,0.3);}
+  .sidenav .fusionentire img {max-width: 200px;}
   p.copyright               { padding:8em 0 1em 0; text-align: center;position: relative;}
   .single-post {word-wrap: break-word;font-size: 1.6em;line-height: 1.8; max-width: 600px; margin:0 auto; padding: 20px;}
   .single-post a {text-decoration:underline;}
@@ -60,15 +60,15 @@
 .tag-box .cat-number {display: inline-block; width: 30%;}
     
 @media all and (max-width:639px) {
-  div.primary header h1 {display: none;}
+  div.sidenav header h1 {display: none;}
   div.ads {display: none;}
-  div.primary nav li {float:left;border-right:1px solid #666;margin-right:10px;padding-right:10px;}
-  div.primary nav li:last-child {border-right:0 none;}
+  div.sidenav nav li {float:left;border-right:1px solid #666;margin-right:10px;padding-right:10px;}
+  div.sidenav nav li:last-child {border-right:0 none;}
   div.container {width:90%;margin:20px auto;}
 }
     
 @media all and (min-width:640px) {
   div.container {display: table;}
   div.sidenav                 { background:#f6f6f6; padding:100px 5%; display: table-cell; width:30%;}
-  div.content                 { padding:20px 10%; display: table-cell; }
+  div.content                 { padding:100px 10%; display: table-cell; }
 }
