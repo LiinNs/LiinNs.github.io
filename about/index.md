@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About | LiinNs Blog
+title: About | LiinNs's Blog
 ---
 
 <style>
