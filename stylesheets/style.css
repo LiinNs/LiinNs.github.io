@@ -69,6 +69,6 @@
     
 @media all and (min-width:640px) {
   div.container {display: table;}
-  div.primary                 { background:#f6f6f6; padding:100px 5%; display: table-cell; width:30%;}
-  div.content                 { padding:100px 10%; display: table-cell; }
+  div.sidenav                 { background:#f6f6f6; padding:100px 5%; display: table-cell; width:30%;}
+  div.content                 { display: table-cell; }
 }
