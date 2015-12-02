@@ -1,0 +1,29 @@
+ div.container {
+	line-height: 1.5;
+}
+ .sidenav {
+	font-size: 1.4em;
+}
+ .sidenav h1 { 
+	color:rgba(0,0,0,0.3);
+	font-size: 1.3em; 
+}
+ div.sidenav div div { 
+	border-top:1px solid rgba(0,0,0,0.05); 
+	padding:3em 0; 
+}
+ .sidenav h1,
+ .sidenav p { 
+	width:85%; 
+}
+    
+ p.copyright,
+ .sidenav h2,
+ .sidenav p,
+ .sidenav { 
+	color:rgba(0,0,0,0.3);
+}
+ .sidenav {
+	max-width: 200px;
+}
+
