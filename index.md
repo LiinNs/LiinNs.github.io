@@ -1,6 +1,6 @@
 ---
 layout: default
-title:林乃胜's Blog
+title:林乃胜的博客
 ---
 # {{ page.title }}
 
