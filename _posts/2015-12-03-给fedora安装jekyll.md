@@ -13,3 +13,5 @@
     * `rvm install 2.0.0` 
   * 安装jekyll 
     * `gem install jekyll -V`
+
+`yum install -y patch libyaml-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel libffi-devel openssl-devel automake libtool bison sqlite-devel`
