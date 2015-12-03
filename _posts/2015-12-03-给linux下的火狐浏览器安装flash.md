@@ -10,10 +10,10 @@
 3. 打开终端并切换到解压目录
 4. 拷贝`libflashplayer.so`到浏览器插件目录下
 5. 拷贝`/usr`目录下文件到系统的`/usr`目录
-6.重启浏览器，Enjoy yourself!
+6. 重启浏览器，Enjoy yourself!
 
 ### 以下是adobe flash player自己的安装介绍
-  Installing using the plugin tar.gz:
+  `Installing using the plugin tar.gz:
     Unpack the plugin tar.gz and copy the files to the appropriate location.  
     Save the plugin tar.gz locally and note the location the file was saved to.
     Launch terminal and change directories to the location the file was saved to.
@@ -25,3 +25,4 @@
       `cp libflashlayer.so <BrowserPluginsLocation>`
     Copy the Flash Player Local Settings configurations files to the /usr directory.  At the prompt type:
       `sudo cp -r usr/* /usr`
+    `
