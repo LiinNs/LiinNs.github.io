@@ -14,15 +14,15 @@
 
 ### 以下是adobe flash player自己的安装介绍
   >Installing using the plugin tar.gz:
-    Unpack the plugin tar.gz and copy the files to the appropriate location.  
-    Save the plugin tar.gz locally and note the location the file was saved to.
-    Launch terminal and change directories to the location the file was saved to.
-    Unpack the tar.gz file.  Once unpacked you will see the following:
+    - Unpack the plugin tar.gz and copy the files to the appropriate location.  
+    - Save the plugin tar.gz locally and note the location the file was saved to.
+    - Launch terminal and change directories to the location the file was saved to.
+    - Unpack the tar.gz file.  Once unpacked you will see the following:
       + libflashplayer.so
       + /usr
-    Identify the location of the browser plugins directory, based on your Linux distribution and Firefox version
-    Copy libflashplayer.so to the appropriate browser plugins directory.  At the prompt type:
+    - Identify the location of the browser plugins directory, based on your Linux distribution and Firefox version
+    - Copy libflashplayer.so to the appropriate browser plugins directory.  At the prompt type:
       `cp libflashlayer.so <BrowserPluginsLocation>`
-    Copy the Flash Player Local Settings configurations files to the /usr directory.  At the prompt type:
+    - Copy the Flash Player Local Settings configurations files to the /usr directory.  At the prompt type:
       `sudo cp -r usr/* /usr`
     
