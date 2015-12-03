@@ -13,21 +13,21 @@
 6. 重启浏览器，Enjoy yourself!
 
 ### 以下是adobe flash player自己的安装介绍
-```
-Installing using the plugin tar.gz:
-<ol>
-  <li>Unpack the plugin tar.gz and copy the files to the appropriate location.  </li>
-  <li>Save the plugin tar.gz locally and note the location the file was saved to.</li>
-  <li>Launch terminal and change directories to the location the file was saved to.
-  <li>Unpack the tar.gz file.  Once unpacked you will see the following:
-    <ul>
-      <li>libflashplayer.so</li>
-      <li>/usr</li>
-    </ul>
-  <li>Identify the location of the browser plugins directory, based on your Linux distribution and Firefox version
-  <li>Copy libflashplayer.so to the appropriate browser plugins directory.  At the prompt type:
-    <code>cp libflashlayer.so <BrowserPluginsLocation></code>
-  <li>Copy the Flash Player Local Settings configurations files to the /usr directory.  At the prompt type:
-    <code>sudo cp -r usr/* /usr</code>
-</ol>
-```
+
+> Installing using the plugin tar.gz:
+  <ol>
+    <li>Unpack the plugin tar.gz and copy the files to the appropriate location.  </li>
+    <li>Save the plugin tar.gz locally and note the location the file was saved to.</li>
+    <li>Launch terminal and change directories to the location the file was saved to.
+    <li>Unpack the tar.gz file.  Once unpacked you will see the following:
+      <ul>
+        <li>libflashplayer.so</li>
+        <li>/usr</li>
+      </ul>
+    <li>Identify the location of the browser plugins directory, based on your Linux distribution and Firefox version
+    <li>Copy libflashplayer.so to the appropriate browser plugins directory.  At the prompt type:</li>
+      <code>cp libflashlayer.so <BrowserPluginsLocation></code>
+    <li>Copy the Flash Player Local Settings configurations files to the /usr directory.  At the prompt type:</li>
+      <code>sudo cp -r usr/* /usr</code>
+  </ol>
+
