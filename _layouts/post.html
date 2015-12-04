@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="all" />
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" media="all" href="/stylesheets/stylesheet.css">
+    <link rel="stylesheet" media="all" href="/stylesheets/markdown.css">
+    <link rel="stylesheet" media="all" href="/stylesheets/syntax.css">
+    <link rel="stylesheet" media="all" href="/stylesheets/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <link rel="stylesheet" type="text/css" href="/css/ie.css" />
+    <![endif]-->
+</head>
+<body class="container">
+
+<div class="markdown-body">
+
+    {{ content }}
+</div>
+
+{% include footer.html %}
+
+</body>
+</html>

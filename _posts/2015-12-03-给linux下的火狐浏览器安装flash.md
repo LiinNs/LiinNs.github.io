@@ -1,3 +1,12 @@
+---
+layout: post
+title: 给linux下的火狐浏览器安装flash
+published: true
+date: 2015-12-03 21:16
+comments: true
+categories: []
+tags: []
+---
 # 火狐浏览器安装flash
 
 由于fedora的firefox没有给我默认安装好flash，导致无法播放视频，于是有了这篇文档存在，用于记录自己实践经历，也方便同病者参考。

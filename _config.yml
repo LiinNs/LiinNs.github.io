@@ -3,6 +3,9 @@ url: "http://liinns.github.io/"
 name: LiinNs's Blog
 author: LiinNs
 email: 876056609@qq.com
+#permalink: /:categories/:year/:month/:day/:title.html
 permalink: weblog/:title/
-#markdown: kramdown
+markdown: kramdown
+kramdown:
+  input: GFM
 highlighter: pygments

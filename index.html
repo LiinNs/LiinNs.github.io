@@ -3,6 +3,31 @@ layout: default
 title: LiinNs's Blog
 ---
 <article itemprop="mainContentOfPage" class="markdown-body entry-content">
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+	<!--{{ post.excerpt | remove: '<p>' | remove: '</p>' }}-->
+    </li>
+  {% endfor %}
+</ul>
+<ul>
+  {% for post in site.related_posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+	<!--{{ post.excerpt | remove: '<p>' | remove: '</p>' }}-->
+    </li>
+  {% endfor %}
+</ul>
+{% highlight ruby %}
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}
 
 	<h1><a aria-hidden="true" href="#火狐同步sync-国际版和本地版" class="anchor" id="user-content-火狐同步sync-国际版和本地版"><span class="octicon octicon-link"></span></a>火狐同步sync 国际版和本地版</h1>
 

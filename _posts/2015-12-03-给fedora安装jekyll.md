@@ -1,3 +1,12 @@
+---
+layout: post
+title: 给fedora安装jekyll
+published: true
+date: 2015-12-03 11:16
+comments: true
+categories: []
+tags: []
+---
 # 给fedora安装jekyll
 
 我的博客[LiinNs](http://liinns.github.io/)是利用Jekyll开发的，现在由于刚迁移开环境到linux下，所以需要重新部署开发环境，详细的安装
