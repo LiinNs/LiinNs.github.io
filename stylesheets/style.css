@@ -1,0 +1,24 @@
+.container {
+    width:1020px;
+    margin:auto;
+}
+nav {
+    float:left;
+    width:20%;
+}
+article {
+    float:right;
+    width:79%;
+}
+footer {
+    margin:auto;
+    padding:auto;
+}
+.column {
+    width:340px;
+    float:left;
+}
+footer .copyright {
+    clear:both;
+    text-align:center;
+}
