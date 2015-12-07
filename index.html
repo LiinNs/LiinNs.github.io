@@ -2,137 +2,109 @@
 layout: default
 title: LiinNs's Blog
 ---
-<article itemprop="mainContentOfPage" class="markdown-body entry-content">
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-	<!--{{ post.excerpt | remove: '<p>' | remove: '</p>' }}-->
-    </li>
-  {% endfor %}
-</ul>
-<ul>
-  {% for post in site.related_posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-	<!--{{ post.excerpt | remove: '<p>' | remove: '</p>' }}-->
-    </li>
-  {% endfor %}
-</ul>
-{% highlight ruby %}
-def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
-{% endhighlight %}
+<h1><a aria-hidden="true" href="#火狐同步sync-国际版和本地版" class="anchor" id="user-content-火狐同步sync-国际版和本地版"><span class="octicon octicon-link"></span></a>火狐同步sync 国际版和本地版</h1>
 
-	<h1><a aria-hidden="true" href="#火狐同步sync-国际版和本地版" class="anchor" id="user-content-火狐同步sync-国际版和本地版"><span class="octicon octicon-link"></span></a>火狐同步sync 国际版和本地版</h1>
+<p>fedora默认的firefox是国际版的，题主我因为以前在win10 下使用的是本地版firefox，而firefox的国际版和本地版同步账号不互通，
+导致切换过来后所有的拓展和书签都无法正常使用，于是琢磨了一个下午，终于将国际版同步转换为本地版同步，
+以下是具体的配置，写下来给同样碰到问题的朋友查看，也方便自己日后修改。</p>
 
-	<p>fedora默认的firefox是国际版的，题主我因为以前在win10 下使用的是本地版firefox，而firefox的国际版和本地版同步账号不互通，
-	导致切换过来后所有的拓展和书签都无法正常使用，于是琢磨了一个下午，终于将国际版同步转换为本地版同步，
-	以下是具体的配置，写下来给同样碰到问题的朋友查看，也方便自己日后修改。</p>
+<p>地址栏进入 <code><a href="about:config">about:config</a></code></p>
 
-	<p>地址栏进入 <code><a href="about:config">about:config</a></code></p>
+<p><strong>注意</strong>：</p>
 
-	<p><strong>注意</strong>：</p>
+<ol>
+	<li>在修改前先将当前使用的同步账号断开，修改完后重启firefox。</li>
+	<li>本地版除了比国际版多出一个<code>.cn</code>，还有一些细小的区别，大家修改的时候要小心，不要为了省事给自己找麻烦。</li>
+	<li>如果不小心修改错了，可以地址栏进入 <code><a href="about:support">about:support</a></code> 选择右上角的<strong>Refresh Firefox</strong>重置火狐浏览器。</li>
+	<li><em>斜体</em>字为可选项</li>
+	<li>可以右健选择<strong>New</strong>新建新的配置项。可以选择String、Boolean、Integer</li>
+	<li>可以右健选择<strong>Reset</strong>重置当前项为默认值。</li>
+</ol>
 
-	<ol>
-		<li>在修改前先将当前使用的同步账号断开，修改完后重启firefox。</li>
-		<li>本地版除了比国际版多出一个<code>.cn</code>，还有一些细小的区别，大家修改的时候要小心，不要为了省事给自己找麻烦。</li>
-		<li>如果不小心修改错了，可以地址栏进入 <code><a href="about:support">about:support</a></code> 选择右上角的<strong>Refresh Firefox</strong>重置火狐浏览器。</li>
-		<li><em>斜体</em>字为可选项</li>
-		<li>可以右健选择<strong>New</strong>新建新的配置项。可以选择String、Boolean、Integer</li>
-		<li>可以右健选择<strong>Reset</strong>重置当前项为默认值。</li>
-	</ol>
+<table>
+	<thead>
+		<tr>
+			<th>配置项</th>
+			<th>国际版</th>
+			<th>本地版</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>identity.fxaccounts.auth.uri</td>
+			<td>https://api.accounts.firefox.com/v1</td>
+			<td>https://api-accounts.firefox.com.cn/v1</td>
+		</tr>
+		<tr>
+			<td>identity.fxaccounts.remote.force_auth.uri</td>
+			<td>https://accounts.firefox.com/force_auth?service=sync&amp;context=fx_desktop_v1</td>
+			<td>https://accounts.firefox.com.cn/force_auth?service=sync&amp;context=fx_desktop_v1</td>
+		</tr>
+		<tr>
+			<td>identity.fxaccounts.remote.oauth.uri</td>
+			<td>https://oauth.accounts.firefox.com/v1</td>
+			<td>https://oauth.firefox.com.cn/v1</td>
+		</tr>
+		<tr>
+			<td>identity.fxaccounts.remote.profile.uri</td>
+			<td>https://profile.accounts.firefox.com/v1</td>
+			<td>https://profile.firefox.com.cn/v1</td>
+		</tr>
+		<tr>
+			<td>identity.fxaccounts.remote.signin.uri</td>
+			<td>https://accounts.firefox.com/signin?service=sync&amp;context=fx_desktop_v1</td>
+			<td>https://accounts.firefox.com.cn/signin?service=sync&amp;context=fx_desktop_v1</td>
+		</tr>
+		<tr>
+			<td>identity.fxaccounts.remote.signup.uri</td>
+			<td>https://accounts.firefox.com/signup?service=sync&amp;context=fx_desktop_v1</td>
+			<td>https://accounts.firefox.com.cn/signup?service=sync&amp;context=fx_desktop_v1</td>
+		</tr>
+		<tr>
+			<td>identity.fxaccounts.remote.uri</td>
+			<td></td>
+			<td>https://accounts.firefox.com.cn/?service=sync&amp;context=fx_desktop_v1</td>
+		</tr>
+		<tr>
+			<td>identity.fxaccounts.remote.webchannel.uri</td>
+			<td>https://accounts.firefox.com/</td>
+			<td>https://accounts.firefox.com.cn/</td>
+		</tr>
+		<tr>
+			<td>identity.fxaccounts.settings.uri</td>
+			<td>https://accounts.firefox.com/settings</td>
+			<td>https://accounts.firefox.com.cn/settings</td>
+		</tr>
+		<tr>
+			<td>loop.fxa.enabled</td>
+			<td></td>
+			<td>false</td>
+		</tr>
+		<tr>
+			<td>services.sync.fxaccounts.enabled</td>
+			<td></td>
+			<td>true</td>
+		</tr>
+		<tr>
+			<td>services.sync.statusURL</td>
+			<td>https://services.mozilla.com/status/</td>
+			<td>https://accounts.firefox.com.cn/status/</td>
+		</tr>
+		<tr>
+			<td>services.sync.tokenServerURI</td>
+			<td>https://token.services.mozilla.com/1.0/sync/1.5</td>
+			<td>https://sync.firefox.com.cn/token/1.0/sync/1.5</td>
+		</tr>
 
-	<table>
-		<thead>
-			<tr>
-				<th>配置项</th>
-				<th>国际版</th>
-				<th>本地版</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>identity.fxaccounts.auth.uri</td>
-				<td>https://api.accounts.firefox.com/v1</td>
-				<td>https://api-accounts.firefox.com.cn/v1</td>
-			</tr>
-			<tr>
-				<td>identity.fxaccounts.remote.force_auth.uri</td>
-				<td>https://accounts.firefox.com/force_auth?service=sync&amp;context=fx_desktop_v1</td>
-				<td>https://accounts.firefox.com.cn/force_auth?service=sync&amp;context=fx_desktop_v1</td>
-			</tr>
-			<tr>
-				<td>identity.fxaccounts.remote.oauth.uri</td>
-				<td>https://oauth.accounts.firefox.com/v1</td>
-				<td>https://oauth.firefox.com.cn/v1</td>
-			</tr>
-			<tr>
-				<td>identity.fxaccounts.remote.profile.uri</td>
-				<td>https://profile.accounts.firefox.com/v1</td>
-				<td>https://profile.firefox.com.cn/v1</td>
-			</tr>
-			<tr>
-				<td>identity.fxaccounts.remote.signin.uri</td>
-				<td>https://accounts.firefox.com/signin?service=sync&amp;context=fx_desktop_v1</td>
-				<td>https://accounts.firefox.com.cn/signin?service=sync&amp;context=fx_desktop_v1</td>
-			</tr>
-			<tr>
-				<td>identity.fxaccounts.remote.signup.uri</td>
-				<td>https://accounts.firefox.com/signup?service=sync&amp;context=fx_desktop_v1</td>
-				<td>https://accounts.firefox.com.cn/signup?service=sync&amp;context=fx_desktop_v1</td>
-			</tr>
-			<tr>
-				<td>identity.fxaccounts.remote.uri</td>
-				<td></td>
-				<td>https://accounts.firefox.com.cn/?service=sync&amp;context=fx_desktop_v1</td>
-			</tr>
-			<tr>
-				<td>identity.fxaccounts.remote.webchannel.uri</td>
-				<td>https://accounts.firefox.com/</td>
-				<td>https://accounts.firefox.com.cn/</td>
-			</tr>
-			<tr>
-				<td>identity.fxaccounts.settings.uri</td>
-				<td>https://accounts.firefox.com/settings</td>
-				<td>https://accounts.firefox.com.cn/settings</td>
-			</tr>
-			<tr>
-				<td>loop.fxa.enabled</td>
-				<td></td>
-				<td>false</td>
-			</tr>
-			<tr>
-				<td>services.sync.fxaccounts.enabled</td>
-				<td></td>
-				<td>true</td>
-			</tr>
-			<tr>
-				<td>services.sync.statusURL</td>
-				<td>https://services.mozilla.com/status/</td>
-				<td>https://accounts.firefox.com.cn/status/</td>
-			</tr>
-			<tr>
-				<td>services.sync.tokenServerURI</td>
-				<td>https://token.services.mozilla.com/1.0/sync/1.5</td>
-				<td>https://sync.firefox.com.cn/token/1.0/sync/1.5</td>
-			</tr>
-
-			<tr>
-				<td><em>services.sync.fxa.privacyURL</em></td>
-				<td>https://accounts.firefox.com/legal/privacy</td>
-				<td>https://accounts.firefox.com.cn/legal/privacy</td>
-			</tr>
-			<tr>
-				<td><em>services.sync.fxa.termsURL</em></td>
-				<td>https://accounts.firefox.com/legal/terms</td>
-				<td>https://accounts.firefox.com.cn/legal/terms</td>
-			</tr>
-		</tbody>
-	</table>
-</article>
+		<tr>
+			<td><em>services.sync.fxa.privacyURL</em></td>
+			<td>https://accounts.firefox.com/legal/privacy</td>
+			<td>https://accounts.firefox.com.cn/legal/privacy</td>
+		</tr>
+		<tr>
+			<td><em>services.sync.fxa.termsURL</em></td>
+			<td>https://accounts.firefox.com/legal/terms</td>
+			<td>https://accounts.firefox.com.cn/legal/terms</td>
+		</tr>
+	</tbody>
+</table>

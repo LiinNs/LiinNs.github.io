@@ -9,8 +9,7 @@ tags: []
 ---
 # 给fedora安装jekyll
 
-我的博客[LiinNs](http://liinns.github.io/)是利用Jekyll开发的，现在由于刚迁移开环境到linux下，所以需要重新部署开发环境，详细的安装
-步骤大家可以参考[官方文档](http://jekyllrb.com/docs/installation/)，[中文版文档](http://jekyll.bootcss.com/docs/installation/)。
+我的博客[LiinNs](http://liinns.github.io/)是利用Jekyll开发的，现在由于刚迁移开环境到linux下，所以需要重新部署开发环境，详细的安装步骤大家可以参考[官方文档](http://jekyllrb.com/docs/installation/)，[中文版文档](http://jekyll.bootcss.com/docs/installation/)。
 
 ### 我要介绍的是安装过程中的陷阱和需要留意的地方。
 

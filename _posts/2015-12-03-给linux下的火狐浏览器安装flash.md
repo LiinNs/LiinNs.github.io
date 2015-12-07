@@ -9,8 +9,7 @@ tags: []
 ---
 # 火狐浏览器安装flash
 
-由于fedora的firefox没有给我默认安装好flash，导致无法播放视频，于是有了这篇文档存在，用于记录自己实践经历，也方便同病者参考。
-虽然是针对firefox介绍的安装方法，理论上支持所有浏览器，无论是chrome、opera或其他。
+由于fedora的firefox没有给我默认安装好flash，导致无法播放视频，于是有了这篇文档存在，用于记录自己实践经历，也方便同病者参考。虽然是针对firefox介绍的安装方法，理论上支持所有浏览器，无论是chrome、opera或其他。
 
 **以下是详细步骤**：
 
@@ -35,7 +34,7 @@ tags: []
       </ul>
     <li>Identify the location of the browser plugins directory, based on your Linux distribution and Firefox version
     <li>Copy libflashplayer.so to the appropriate browser plugins directory.  At the prompt type:</li>
-      <code>cp libflashlayer.so <BrowserPluginsLocation></code>
+      <code>cp libflashlayer.so `BrowserPluginsLocation`</code>
     <li>Copy the Flash Player Local Settings configurations files to the /usr directory.  At the prompt type:</li>
       <code>sudo cp -r usr/* /usr</code>
   </ol>
