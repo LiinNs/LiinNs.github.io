@@ -15,13 +15,12 @@
 <body>
     {% include header.html %}
     <div class="container">
-
-        {% include sidebar.html %}
-
-        <div class="content markdown-body">
-          	{{ content }}
+        <div class="content">
+            {% include sidebar.html %}
+          	<div class="markdown-body">
+          	    {{ content }}
+          	</div>
         </div>
-
     </div>
     {% include footer.html %}
 </body>

@@ -1,7 +1,7 @@
 body {
     color: #333;
     font: 13px/1.4 Helvetica,arial,nimbussansl,liberationsans,freesans,clean,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    background:#f1f1f1 none repeat scroll 0 0;
+    background:#222324 none repeat scroll 0 0;
 }
 a {
     font-size:1em;
@@ -18,14 +18,17 @@ a:hover {
 }
 /* 网站容器 */
 .container {
+    background:#f1f1f1 none repeat scroll 0 0;
+}
+.content {
     width:1020px;
     margin:auto;
-    
 }
 /* 网站页头 */
 header {
     background:#222324 none repeat scroll 0 0;
     color:#8e8e8e;
+    margin:15px 0;
 }
 .header {
     width:1020px;
@@ -49,9 +52,11 @@ footer {
     background:#222324 none repeat scroll 0 0;
     color:#8e8e8e;
     padding-bottom:5px;
+    margin-bottom:0;
 }
 .footer {
     width:1020px;
+    padding:20px 0 0 0;
     margin:auto;
 }
 /* 脚注 分3栏 */
@@ -61,9 +66,11 @@ footer {
     float:left;
 }
 .footer .column:nth-child(2) {
-    padding:10px;
+    padding:8px;
     width:200px;
     float:left;
+    border-left: 1px solid rgba(0, 0, 0, 0.42);
+    border-right: 1px solid rgba(0, 0, 0, 0.42);
 }
 .footer .column:last-child {
     padding:10px;
@@ -90,11 +97,83 @@ footer {
 .cycle:hover {
     background: rgba(0, 200, 0, 0.7) none repeat scroll 0 0;
 }
+/* 脚注联系方式 */
+div address {
+    margin:13px 0;
+}
+div address a:link,div address a:visited {
+    color:#8e8e8e;
+}
+div address a:hover {
+    color:#8e8e8e;
+    text-decoration:underline;
+    text-decoration-color: #168c0e; /* 下划线颜色 */
+}
 /* 脚注版权信息 */
 .footer .copyright {
+    border-top: 1px solid rgba(0, 0, 0, 0.42);
     font-size:0.9em;
     color:#aaa;
     clear:both;
     text-align:center;
-    margin:0;
+    padding:15px 0 0 0;
+}
+
+/*css3字体*/
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot');
+    src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.svg#icomoon') format('svg'),
+        url('../fonts/icomoon.woff') format('woff'),
+        url('../fonts/icomoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: 'icomoon';
+    font-style: normal;
+    speak: none;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.icon-github:before {
+    content: "\e000";
+}
+.icon-twitter:before {
+    content: "\e001";
+}
+.icon-facebook:before {
+    content: "\e002";
+}
+.icon-home:before {
+    content: "\e003";
+}
+.icon-location:before {
+    content: "\e004";
+}
+.icon-user:before {
+    content: "\e005";
+}
+.icon-phone:before {
+    content: "\e006";
+}
+.icon-mail:before {
+    content: "\e007";
+}
+.icon-user-2:before {
+    content: "\e008";
 }
