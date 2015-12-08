@@ -1,6 +1,24 @@
+body {
+    background-color:gray;
+}
+a {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:14px;
+}
+a:link, a:visited {
+    color:blue;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+/* 为了使定义生效，a:hover 必须位于 a:link 和 a:visited 之后！！*/
+/* 为了使定义生效，a:active 必须位于 a:hover 之后！！*/
 .container {
     width:1020px;
     margin:auto;
+}
+header {
 }
 nav {
     float:left;
@@ -11,12 +29,29 @@ article {
     width:79%;
 }
 footer {
-    margin:auto;
-    padding:auto;
+    background-color:gray;
 }
-.column {
-    width:340px;
+footer .column {
+    padding:10px;
+    width:320px;
     float:left;
+}
+.cycle{
+    margin:5px 90px;
+    background: rgba(255, 255, 255, 0.3) none repeat scroll 0 0;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    padding: 4px;
+    position: relative;
+}
+.cycle:hover {
+    background: rgba(0, 255, 255, 0.3) none repeat scroll 0 0;
+}
+.column img {
+    border-radius: 50%;
+    width:100px;
+    height:100px;
 }
 footer .copyright {
     clear:both;
