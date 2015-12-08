@@ -1,59 +1,100 @@
 body {
-    background-color:gray;
+    color: #333;
+    font: 13px/1.4 Helvetica,arial,nimbussansl,liberationsans,freesans,clean,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    background:#f1f1f1 none repeat scroll 0 0;
 }
 a {
-    font-family:Verdana, Arial, Helvetica, sans-serif;
-    font-size:14px;
+    font-size:1em;
 }
+/* 为了使定义生效，a:hover 必须位于 a:link 和 a:visited 之后！！*/
+/* 为了使定义生效，a:active 必须位于 a:hover 之后！！*/
 a:link, a:visited {
-    color:blue;
+    color:#168c0e;
     text-decoration:none;
 }
 a:hover {
     text-decoration:underline;
+    color:#168c0e;
 }
-/* 为了使定义生效，a:hover 必须位于 a:link 和 a:visited 之后！！*/
-/* 为了使定义生效，a:active 必须位于 a:hover 之后！！*/
+/* 网站容器 */
 .container {
     width:1020px;
     margin:auto;
+    
 }
+/* 网站页头 */
 header {
+    background:#222324 none repeat scroll 0 0;
+    color:#8e8e8e;
 }
+.header {
+    width:1020px;
+    margin:auto;
+}
+.header h1 {
+     margin:0;
+}
+/* 导航栏 */
 nav {
     float:left;
     width:20%;
 }
+/* 正文 */
 article {
     float:right;
     width:79%;
 }
+/* 网站脚注 */
 footer {
-    background-color:gray;
+    background:#222324 none repeat scroll 0 0;
+    color:#8e8e8e;
+    padding-bottom:5px;
 }
-footer .column {
+.footer {
+    width:1020px;
+    margin:auto;
+}
+/* 脚注 分3栏 */
+.footer .column:first-child {
     padding:10px;
-    width:320px;
+    width:380px;
     float:left;
 }
+.footer .column:nth-child(2) {
+    padding:10px;
+    width:200px;
+    float:left;
+}
+.footer .column:last-child {
+    padding:10px;
+    width:380px;
+    float:left;
+}
+/* 脚注大猫图片 圆形 */
+.column img {
+    border-radius: 50%;
+    width:100px;
+    height:100px;
+}
+/* 脚注大猫背景 */
 .cycle{
-    margin:5px 90px;
-    background: rgba(255, 255, 255, 0.3) none repeat scroll 0 0;
+    margin:5px 45px;
+    background: rgba(0, 200, 0, 0.3) none repeat scroll 0 0;
     border-radius: 50%;
     height: 100px;
     width: 100px;
     padding: 4px;
     position: relative;
 }
+/* 脚注大猫背景鼠标悬浮效果 */
 .cycle:hover {
-    background: rgba(0, 255, 255, 0.3) none repeat scroll 0 0;
+    background: rgba(0, 200, 0, 0.7) none repeat scroll 0 0;
 }
-.column img {
-    border-radius: 50%;
-    width:100px;
-    height:100px;
-}
-footer .copyright {
+/* 脚注版权信息 */
+.footer .copyright {
+    font-size:0.9em;
+    color:#aaa;
     clear:both;
     text-align:center;
+    margin:0;
 }

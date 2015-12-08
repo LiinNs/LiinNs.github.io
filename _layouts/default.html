@@ -13,8 +13,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 </head>
 <body>
+    {% include header.html %}
     <div class="container">
-        {% include header.html %}
 
         {% include sidebar.html %}
 
@@ -22,7 +22,7 @@
           	{{ content }}
         </div>
 
-        {% include footer.html %}
     </div>
+    {% include footer.html %}
 </body>
 </html>
