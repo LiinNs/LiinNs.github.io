@@ -1,5 +1,5 @@
 baseurl:
-url: "http://liinns.github.io/"
+url: "https://liinns.github.io/"
 name: LiinNs's Blog
 author: LiinNs
 email: 876056609@qq.com
@@ -8,4 +8,4 @@ permalink: weblog/:title/
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: pygments
+highlighter: rouge
