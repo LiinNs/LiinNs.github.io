@@ -5,13 +5,657 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="en" http-equiv="Content-Language">
     <meta content="width=1020" name="viewport">
-    <title>林乃胜的简历</title>
-    <link rel="stylesheet" media="all" href="./stylesheets/stylesheet.css">
-    <link rel="stylesheet" media="all" href="./stylesheets/markdown.css">
-    <link rel="stylesheet" media="all" href="./stylesheets/syntax.css">
-    <link rel="stylesheet" media="all" href="./stylesheets/style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <meta name="author" content="林乃胜">
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: 0;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  line-height: 1.25rem;
+  background: #EEE;
+  color: rgba(0, 0, 0, .88);
+  font-size: .875rem;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+a {
+  color: rgba(0, 0, 0, .64);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+footer .profiles {
+  margin-bottom: 56px;
+}
+
+footer .profiles a:not(:last-of-type) {
+  border-right: 1px solid rgba(0,0,0,.4);
+  margin-right: .6em;
+  padding-right: .8em;
+}
+
+footer #copyright {
+  color: rgba(0, 0, 0, .4);
+}
+
+#resume #main .list ul li:not(:first-child) {
+  margin-top: 28px;
+}
+
+#resume #main .list ul li h3 {
+  font-weight: 400;
+  font-size: 1em;
+  margin-bottom: 4px;
+}
+
+#resume #main .list ul li h3.title {
+  font-weight: 700;
+  color: rgba(0, 0, 0, .88);
+}
+
+#resume #main .list ul li h3.subtitle {
+  font-weight: 600;
+  color: rgba(0, 0, 0, .64);
+}
+
+#resume #main .list ul li h3.location,
+#resume #main .list ul li h3.time {
+  color: rgba(0, 0, 0, .64);
+}
+
+#resume #main .list ul li h3.time .period {
+  color: rgba(0, 0, 0, .64);
+}
+
+#resume #main .list ul li .left,
+#resume #main .list ul li .right {
+  width: 50%;
+}
+
+#resume #main .list ul li .left {
+  padding-right: 48px;
+}
+
+#resume #main .list ul li .right {
+  padding-left: 48px;
+}
+
+#resume #main .list ul li .description {
+  font-size: 1em;
+  color: rgba(0, 0, 0, .64);
+}
+
+#resume #main .list ul li .description p {
+  margin-bottom: 12px;
+}
+
+#resume #main .list ul li .description p:last-of-type {
+  margin-bottom: 0;
+}
+
+#resume #main #contact.list ul li,
+#resume #main #skills.list ul li {
+  font-size: 1em;
+  line-height: 1.25rem;
+}
+
+#resume #main #contact.list ul li:not(:first-child),
+#resume #main #skills.list ul li:not(:first-child) {
+  margin-top: 12px;
+}
+
+#resume {
+  margin: 40px auto;
+  padding: 40px;
+  max-width: 768px;
+  box-sizing: content-box;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+}
+
+.resume-section {
+  margin-top: 28px;
+  display: block;
+}
+
+.sectionLeft {
+  float: left;
+  /*width: 132px;*/
+}
+
+.sectionRight {
+  float: right;
+  width: 635px;
+}
+
+h1#name {
+  font-size: 2.57em;
+  line-height: 2.5rem;
+  color: rgba(0, 0, 0, .88);
+  font-weight: 600;
+  position: relative;
+  margin-top: 2px;
+}
+
+.current-position {
+  font-size: 1em;
+  font-weight: 600;
+  margin-right: 4px;
+  color: rgba(0, 0, 0, .88);
+  margin-top: 7px;
+}
+
+ul.subContact {
+  font-size: 1em;
+  margin-top: 12px;
+}
+
+ul.subContact li {
+  display: inline-block;
+  color: rgba(0, 0, 0, .64);
+  margin-right: 8px;
+}
+
+ul.subContact li a {
+  color: rgba(0, 0, 0, .64);
+}
+
+ul.subContact li:not(:last-of-type) {
+  border-right: 1px solid rgba(0, 0, 0, .4);
+  margin-right: .6em;
+  padding-right: .8em;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.subContact svg {
+  fill: rgba(0, 0, 0, .64);
+}
+
+.resumeSection {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #3d79f2;
+}
+
+.about-me {
+  color: rgba(0, 0, 0, .64);
+  font-size: 1em;
+}
+
+.spacing-small #resume {
+  padding: 49px 0;
+}
+
+.spacing-small #top .subAbout {
+  margin-top: 20px;
+}
+
+.spacing-small .resume-section {
+  margin-top: 20px;
+}
+
+.spacing-small #resume #main .list ul li:not(:first-child) {
+  margin-top: 20px;
+}
+
+.spacing-small #resume #main .list ul li:first-child {
+  margin-top: 0;
+}
+
+.spacing-small #resume #main #contact.list ul li:not(:first-child),
+.spacing-small #resume #main #skills.list ul li:not(:first-child) {
+  margin-top: 4px;
+}
+
+.spacing-large #resume {
+  padding: 81px 0 73px;
+}
+
+.spacing-large #top .subAbout {
+  margin-top: 44px;
+}
+
+.spacing-large #resume #main .list ul {
+  margin-top: 0;
+}
+
+.spacing-large #resume #main .list ul li {
+  margin-top: 20px;
+}
+
+.spacing-large #resume #main .list ul li:first-child {
+  margin-top: 0;
+}
+
+.spacing-large .currentPosition {
+  position: relative;
+  margin-top: 7px;
+}
+
+.spacing-large ul.subContact {
+  margin-top: 12px;
+}
+
+.spacing-large .resume-section {
+  margin-top: 44px;
+}
+
+#skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.skills {
+  width: 50%;
+  padding-right: 5px;
+}
+
+.skills h3.title,
+.skills ul li {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 1em;
+  color: rgba(0, 0, 0, .64);
+}
+
+.skills h3.title {
+  font-weight: 700;
+  color: rgba(0, 0, 0, .88);
+}
+
+@media screen and (max-width:850px) {
+  .sectionLeft,
+  .sectionRight {
+    float: none;
+    width: 100%;
+  }
+  .spacing-small h2.resumeSection {
+    margin-bottom: 4px;
+  }
+  .spacing-large h2.resumeSection,
+  h2.resumeSection {
+    margin-bottom: 12px;
+  }
+  .mobile-hide {
+    display: none;
+  }
+  .desktop-hide {
+    display: block;
+  }
+  .left,
+  .right {
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+  #resume #main .list ul li .description {
+    margin-top: 4px;
+  }
+  #resume {
+    margin-top: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .skills {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+  .skills:not(:first-child) {
+    margin-top: 28px;
+  }
+}
+
+@media screen and (max-width:420px) {
+  body {
+    font-size: 1rem;
+  }
+  #resume {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media print {
+  #top h1#name span {
+    font-weight: 100;
+  }
+  #resume {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+  }
+  body {
+    margin-top: 17px;
+    background: 0 0;
+  }
+  .sectionLeft,
+  .sectionRight {
+    float: none;
+    width: 100%;
+  }
+  .spacing-small h2.resumeSection {
+    margin-bottom: 4px;
+  }
+  .spacing-large h2.resumeSection,
+  h2.resumeSection {
+    margin-bottom: 12px;
+  }
+  .mobile-hide {
+    display: none;
+  }
+  .desktop-hide {
+    display: block;
+  }
+  .left,
+  .right {
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+  #resume #main .list ul li .description {
+    margin-top: 4px;
+  }
+  #resume {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  #resume #main .list ul li h3.time .period {
+    display: none;
+  }
+  #skills {
+    page-break-inside: avoid;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+  </style>
+
 </head>
+
 <body>
+  <main id="resume">
+    <header class="inside">
+      <h1 id="name">林乃胜</h1>
+      <h2 class="current-position">开发工程师</h2>
+      <ul class="subContact">
+          <li class="location"><span class="icon"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" class="style-scope iron-icon"></path></g></svg></span> 上海市</li>
+        <li class="website"><span class="icon"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" class="style-scope iron-icon"></path></g></svg></span><a href="http://https://liinns.github.io"> https://liinns.github.io</a></li>
+        <li class="email"><span class="icon"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" class="style-scope iron-icon"></path></g></svg></span><a href="mailto:ultralin@163.com"> ultralin@163.com</a></li>
+        <li class="phone"><span class="icon"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" class="style-scope iron-icon"></path></g></svg></span> 18789286079</li>
+      </ul>
+    </header>
+    <article id="main">
+      <div class="inside">
+        <section class="resume-section subAbout">
+          <section class="sectionLeft">
+            <h2 id="about-title" class="resumeSection">自我简介</h2>
+          </section>
+          <section class="sectionRight">
+            <p class="about-me">系湖南省长沙市中南大学2013本科毕业生，学士学位，从事JavaWeb软件开发已逾2年（一年制造企业信息化平台开发，一年数据挖掘开发），关注大数据挖掘和信息可视化处理以及前端开发。</p>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">工作经历</h2>
+          </section>
+          <section class="sectionRight">
+            <div class="list">
+              <ul>
+                <li class="experience">
+                  <h3 class="title">海南省科学发展研究院 – (模拟仿真中心部门)研发工程师</h3> 
+                  <h3 class="time">2015-04-20 – 2016-04-22（一年）</h3> 
+                  <div class="description">
+                    <p>以政治、经济、社会等理论为主要研究方向的公益性决策研究机构，是海南省重点支持的决策咨询机构。模拟经济、社会、生态等系统中相关要素进行系统计算，仿真系统的客观规律，分析系统的发展趋势支持决策咨询。</p>
+                  </div>
+<!--                    -->
+                </li>
+                <li class="experience">
+                  <h3 class="title">厦门市东软汉和信息科技有限公司 – 开发工程师</h3> 
+                  <h3 class="time">2014-03-12 – 2015-03-20(一年)</h3> 
+                  <div class="description">
+                    <p>面向中小企业制造业信息化的ASP应用研究，供应链ASP应用系统需求分析，主攻订单领域，负责ERP-OM、CRM、SRM等订单领域IT产品版本管理，熟悉供应链端到端业务流程及ERP实施。</p>
+                  </div>
+<!--                    -->
+                </li>
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">所做项目</h2>
+          </section>
+          <section class="sectionRight">
+            <div class="list">
+              <ul>
+                <li class="projects">
+                  <h3 class="title">
+                  安灯(MESAndon生产监控)
+                  </h3>
+                  
+                  <h3 class="time">2014-04 – 2014-07</h3> 
+                  <div class="description">
+                    <p>江铃发动机生产线安灯系统，提供实时生产信息统计（不同排量产品生产件数，产品合格数，通过率，生产工位状态是否正常等）。</p>
+                  </div>
+                </li>
+                <li class="projects">
+                  <h3 class="title">
+                  扬力MES (ylmes)
+                  </h3>
+                  
+                  <h3 class="time">2014-09 – 2014-11</h3> 
+                  <div class="description">
+                    <p>针对中小企业车间半自动化生产信息化制造执行系统，设备管理，流程管理，基础信息管理，物料管理等。</p>
+                  </div>
+                </li>
+                <li class="projects">
+                  <h3 class="title">
+                  平台CORE(harmonyCore)
+                  </h3>
+                  
+                  <h3 class="time">2014-12 – 2015-03</h3> 
+                  <div class="description">
+                    <p>core为公司所有web平台系统的核心war包，为提高公司开发效率、提高系统稳定性、使其易于拓展而进行的重构。</p>
+                  </div>
+                </li>
+                <li class="projects">
+                  <h3 class="title">
+                  内网文件共享平台开发
+                  </h3>
+                  
+                  <h3 class="time">2015-05 – 2015-06</h3> 
+                  <div class="description">
+                    <p>基于windows server提供的域管理，充分利用其天生的AD(活动目录)和OU(组织单元),结合网友共享的AutoIT3文件可视化预览软件源码开发一个具有部门间权限区别和部门内部上下级权限区别的文件管理系统。</p>
+                  </div>
+                </li>
+                <li class="projects">
+                  <h3 class="title">
+                  A系统
+                  </h3>
+                  
+                  <h3 class="time">2015-07 – 2016-03</h3> 
+                  <div class="description">
+                    <p>公司重点研究项目，迎合国家互联网+政策，结合经济、政治、生态、科技等领域研究成果，研发的决策咨询类支持专家系统。依据统计学利用数据信息正相关和负相关特性预测各个领域各种统计指标的发展趋势。</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">教育背景</h2>
+          </section>
+          <section class="sectionRight">
+            <div id="education" class="list">
+              <ul id="educations">
+                <li class="education">
+                  <h3 class="title">中南大学(985 211)</h3>
+                  <h3 class="subtitle">学士学位</h3>
+                  <h3 class="time">2008-08 - 2013-07</h3>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">荣誉奖项</h2>
+          </section>
+          <section class="sectionRight">
+            <div id="awards" class="list">
+              <ul id="awards">
+                <li class="award">
+                  <h3 class="title">最佳建议奖</h3>
+                  <h3 class="subtitle">海南省科学发展研究院</h3>
+                  <h3 class="time">2015-01</h3>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+
+
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">擅长技能</h2>
+          </section>
+          <section class="sectionRight" id="skills">
+            <div class="skills">
+              <h3 class="title">语言类</h3>
+              <ul>
+                <li>Java</li>
+                <li>Javascript</li>
+                <li>HTML（HTML5 localStorage API等）</li>
+                <li>CSS（CSS3新布局、动画等）</li>
+                <li>Python（科学计算numpy）</li>
+              </ul>
+            </div>
+            <div class="skills">
+              <h3 class="title">框架类</h3>
+              <ul>
+                <li>Hibernat</li>
+                <li>Spring</li>
+                <li>Struts</li>
+                <li>jQuery</li>
+                <li>EXTJS</li>
+                <li>EasyUI</li>
+                <li>Jekyll（github pages）</li>
+              </ul>
+            </div>
+            <div class="skills">
+              <h3 class="title">技能类</h3>
+              <ul>
+                <li>快速原型设计（Mockups）</li>
+                <li>需求分析</li>
+                <li>程序设计</li>
+                <li>UML</li>
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">语言能力</h2>
+          </section>
+          <section class="sectionRight">
+            <div id="languages" class="list">
+              <ul id="languages">
+                <li class="lang">
+                  <h3 class="title">英语</h3>
+                  <div class="description">
+                    <p>英语4级，无障碍学习英文技术文档</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+
+        <section class="resume-section">
+          <section class="sectionLeft">
+            <h2 class="resumeSection">兴趣方向</h2>
+          </section>
+          <section class="sectionRight">
+            <div id="interests" class="list">
+              <ul id="interests">
+                <li class="interest">
+                  <h3 class="title">Java开发，前端开发</h3>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <div class="clearfix"></div>
+        </section>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <div class="profiles">
+      <a href="https://github.com/liinns">Github</a>
+      <a href="http://weibo.com/Hjax">微博</a>
+      <a href="https://www.linkedin.com/in/liinns">Linkedin</a>
+      <a href="javascript:window.print();">打印PDF</a>
+    </div>
+    <p id="copyright">Powered by <a href="https://github.com/jsonresume/resume-cli">resume-cli</a>, theme designed by <a href="https://github.com/hectorguo/jsonresume-theme-material">Hector Guo - jsonresume-theme-material</a></p>
+  </footer>
 </body>
 </html>
+
