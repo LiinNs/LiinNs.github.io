@@ -8,4 +8,5 @@ permalink: weblog/:title/
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: rouge
+highlighter: rouge\
+host: 0.0.0.0
