@@ -1,112 +1,61 @@
----
-layout: default
-title: LiinNs's Blog
----
-<article>
-<h1><a aria-hidden="true" href="#火狐同步sync-国际版和本地版" class="anchor" id="user-content-火狐同步sync-国际版和本地版"><span class="octicon octicon-link"></span></a>火狐同步sync 国际版和本地版</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>fedora默认的firefox是国际版的，题主我因为以前在win10 下使用的是本地版firefox，而firefox的国际版和本地版同步账号不互通，
-导致切换过来后所有的拓展和书签都无法正常使用，于是琢磨了一个下午，终于将国际版同步转换为本地版同步，
-以下是具体的配置，写下来给同样碰到问题的朋友查看，也方便自己日后修改。</p>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<p>地址栏进入 <code><a href="about:config">about:config</a></code></p>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./plugin/bootstrap4/css/bootstrap.min.css">
+  <!-- Custom styles for this template -->
+  <link href="./css/cover.css" rel="stylesheet">
+  <link rel="icon" href="./favicon.ico">
+</head>
 
-<p><strong>注意</strong>：</p>
+<body>
+  <div class="site-wrapper">
 
-<ol>
-	<li>在修改前先将当前使用的同步账号断开，修改完后重启firefox。</li>
-	<li>本地版除了比国际版多出一个<code>.cn</code>，还有一些细小的区别，大家修改的时候要小心，不要为了省事给自己找麻烦。</li>
-	<li>如果不小心修改错了，可以地址栏进入 <code><a href="about:support">about:support</a></code> 选择右上角的<strong>Refresh Firefox</strong>重置火狐浏览器。</li>
-	<li><em>斜体</em>字为可选项</li>
-	<li>可以右健选择<strong>New</strong>新建新的配置项。可以选择String、Boolean、Integer</li>
-	<li>可以右健选择<strong>Reset</strong>重置当前项为默认值。</li>
-</ol>
+    <div class="site-wrapper-inner">
 
-<table>
-	<thead>
-		<tr>
-			<th>配置项</th>
-			<th>国际版</th>
-			<th>本地版</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>identity.fxaccounts.auth.uri</td>
-			<td>https://api.accounts.firefox.com/v1</td>
-			<td>https://api-accounts.firefox.com.cn/v1</td>
-		</tr>
-		<tr>
-			<td>identity.fxaccounts.remote.force_auth.uri</td>
-			<td>https://accounts.firefox.com/force_auth?service=sync&amp;context=fx_desktop_v1</td>
-			<td>https://accounts.firefox.com.cn/force_auth?service=sync&amp;context=fx_desktop_v1</td>
-		</tr>
-		<tr>
-			<td>identity.fxaccounts.remote.oauth.uri</td>
-			<td>https://oauth.accounts.firefox.com/v1</td>
-			<td>https://oauth.firefox.com.cn/v1</td>
-		</tr>
-		<tr>
-			<td>identity.fxaccounts.remote.profile.uri</td>
-			<td>https://profile.accounts.firefox.com/v1</td>
-			<td>https://profile.firefox.com.cn/v1</td>
-		</tr>
-		<tr>
-			<td>identity.fxaccounts.remote.signin.uri</td>
-			<td>https://accounts.firefox.com/signin?service=sync&amp;context=fx_desktop_v1</td>
-			<td>https://accounts.firefox.com.cn/signin?service=sync&amp;context=fx_desktop_v1</td>
-		</tr>
-		<tr>
-			<td>identity.fxaccounts.remote.signup.uri</td>
-			<td>https://accounts.firefox.com/signup?service=sync&amp;context=fx_desktop_v1</td>
-			<td>https://accounts.firefox.com.cn/signup?service=sync&amp;context=fx_desktop_v1</td>
-		</tr>
-		<tr>
-			<td>identity.fxaccounts.remote.uri</td>
-			<td></td>
-			<td>https://accounts.firefox.com.cn/?service=sync&amp;context=fx_desktop_v1</td>
-		</tr>
-		<tr>
-			<td>identity.fxaccounts.remote.webchannel.uri</td>
-			<td>https://accounts.firefox.com/</td>
-			<td>https://accounts.firefox.com.cn/</td>
-		</tr>
-		<tr>
-			<td>identity.fxaccounts.settings.uri</td>
-			<td>https://accounts.firefox.com/settings</td>
-			<td>https://accounts.firefox.com.cn/settings</td>
-		</tr>
-		<tr>
-			<td>loop.fxa.enabled</td>
-			<td></td>
-			<td>false</td>
-		</tr>
-		<tr>
-			<td>services.sync.fxaccounts.enabled</td>
-			<td></td>
-			<td>true</td>
-		</tr>
-		<tr>
-			<td>services.sync.statusURL</td>
-			<td>https://services.mozilla.com/status/</td>
-			<td>https://accounts.firefox.com.cn/status/</td>
-		</tr>
-		<tr>
-			<td>services.sync.tokenServerURI</td>
-			<td>https://token.services.mozilla.com/1.0/sync/1.5</td>
-			<td>https://sync.firefox.com.cn/token/1.0/sync/1.5</td>
-		</tr>
+      <div class="cover-container">
 
-		<tr>
-			<td><em>services.sync.fxa.privacyURL</em></td>
-			<td>https://accounts.firefox.com/legal/privacy</td>
-			<td>https://accounts.firefox.com.cn/legal/privacy</td>
-		</tr>
-		<tr>
-			<td><em>services.sync.fxa.termsURL</em></td>
-			<td>https://accounts.firefox.com/legal/terms</td>
-			<td>https://accounts.firefox.com.cn/legal/terms</td>
-		</tr>
-	</tbody>
-</table>
-</article>
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">Cover</h3>
+            <nav class="nav nav-masthead">
+              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Contact</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="inner cover">
+          <h1 class="cover-heading">Cover your page.</h1>
+          <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your
+            own fullscreen background photo to make it your own.</p>
+          <p class="lead">
+            <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+          </p>
+        </div>
+
+        <div class="mastfoot">
+          <div class="inner">
+            <p>Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  <script src="./plugin/jquery-3.1.1.js"></script>
+  <script src="./plugin/tether1.3.3/js/tether.js"></script>
+  <script src="./plugin/bootstrap4/js/bootstrap.js"></script>
+</body>
+
+</html>
