@@ -7,20 +7,7 @@ title: 目录
   <div class="column is-three-quarters">
     <!-- This loops through the paginated posts -->
     {% for post in paginator.posts %}
-    <div class="box" data-href="{{ post.url }}">
-      <article class="media">
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
-                <small>@</small> <small>{{ post.date }}</small>
-              <br>
-              {{post.excerpt}}
-            </p>
-          </div>
-        </div>
-      </article>
-    </div>
+      {% include _post.html %}
     {% endfor %}
 
     <!-- 分页 -->

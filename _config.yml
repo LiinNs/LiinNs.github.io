@@ -57,3 +57,8 @@ defaults:
       path: ""
     values:
       layout: "application"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

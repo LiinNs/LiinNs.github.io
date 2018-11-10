@@ -1,0 +1,18 @@
+<div class="box post-box" href="{{ post.url }}">
+    <article class="media">
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
+            <br>
+            {{post.excerpt}}
+          </p>
+        </div>
+        <nav class="level is-mobile">
+            <div class="level-right">
+              <small>@</small> <small>{{ post.date }}</small>
+            </div>
+          </nav>
+      </div>
+    </article>
+  </div>

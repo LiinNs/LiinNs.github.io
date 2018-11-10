@@ -1,12 +1,13 @@
 <!doctype html>
 <html class="has-navbar-fixed-top">
   <head>
-    {% include _head.html %}
+      {% include _head.html %}
   </head>
   <body>
     {% include _nav.html %}
     <section class="section">
       <div class="container">
+        {% include _bread_crumb.html %}
         {{content}}
       </div>
     </section>

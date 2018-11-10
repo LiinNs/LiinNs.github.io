@@ -1,27 +1,14 @@
 ---
-title: jekyll分类 - LiinNs
+title: jekyll分类
 ---
-
+{% include _bread_crumb.html %}
 {% for category in site.categories %}
 {% if category[0] == 'jekyll' %}
   <div class="notification is-light">
     <strong>{{category[0]}}</strong> 分类下的文章
   </div>
   {% for post in category[1] %}
-  <div class="box" data-href="{{ post.url }}">
-    <article class="media">
-      <div class="media-content">
-        <div class="content">
-          <p>
-            <strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
-              <small>@</small> <small>{{ post.date }}</small>
-            <br>
-            {{post.excerpt}}
-          </p>
-        </div>
-      </div>
-    </article>
-  </div>
+    {% include _post.html %}
   {% endfor %}
 {% endif %}
 {% endfor %}
