@@ -1,0 +1,63 @@
+---
+layout: application
+title: 目录
+---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <div class="box" data-href="{{ post.url }}">
+    <article class="media">
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
+              <small>@</small> <small>{{ post.date }}</small>
+            <br>
+            {{post.excerpt}}
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+{% endfor %}
+
+<!-- 分页 -->
+{% if paginator.total_pages > 1 %}
+<nav class="pagination is-small" role="navigation" aria-label="pagination">
+  {% if paginator.previous_page %}
+    <a class="pagination-previous" href="{{ paginator.previous_page_path | relative_url }}" >上一页</a>
+  {% else %}
+    <a class="pagination-previous" title="已经是第一页" disabled >上一页</a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a class="pagination-next" href="{{ paginator.next_page_path | relative_url }}">下一页</a>
+  {% else %}
+    <a class="pagination-next"  title="已经是最后一页" disabled>下一页</a>
+  {% endif %}
+
+  <ul class="pagination-list">
+    {% for page in (1..paginator.total_pages) %}
+      <li>
+        {% if page == paginator.page %}
+          <a class="pagination-link is-current" aria-label="第{{page}}页" aria-current="page">
+            {{page}}
+          </a>
+        {% elsif page == 1 %}
+          <a class="pagination-link" aria-label="第{{page}}页" href="{{ paginator.previous_page_path | relative_url }}">
+            {{page}}
+          </a>
+        {% else %}
+          <a class="pagination-link" aria-label="第{{page}}页" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">
+            {{ page }}
+          </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endif %}
+
+<script>
+  
+</script>

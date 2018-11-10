@@ -1,1 +1,68 @@
-this is about page!
+---
+layout: application
+title: About
+---
+<div class="tile is-ancestor">
+    <div class="tile is-vertical is-8">
+      <div class="tile">
+        <div class="tile is-parent is-vertical">
+          <article class="tile is-child notification is-primary">
+            <p class="title">LiinNs</p>
+            <p class="subtitle">御猫程序员哥哥</p>
+            
+          </article>
+          <article class="tile is-child notification is-warning">
+              手持两把锟斤拷，口中疾呼烫烫烫。</br>
+              脚踏千朵屯屯屯，笑看万物锘锘锘。
+          </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child box">
+            <figure class="image is-150x150">
+              <img class="is-rounded" src="/assets/images/avatar.jpg">
+            </figure>
+          </article>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+            <pre class="highlight">
+      <code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+          <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">num</span><span class="o">));</span>
+          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+      <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="o">{</span><span class="mi">11</span><span class="o">,</span> <span class="mi">998</span><span class="o">,</span> <span class="mi">1024</span><span class="o">,</span> <span class="mi">520</span><span class="o">,</span> <span class="mi">996</span><span class="o">,</span> <span class="mi">1314</span><span class="o">,</span> <span class="mi">69</span><span class="o">};</span></span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="o">.</span><span class="na">lenght</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+          <span class="k">new</span> <span class="nf">Thread</span><span class="o">(</span><span class="k">new</span> <span class="n">ArraySort</span><span class="o">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">])).</span><span class="na">start</span><span class="o">();</span>
+        <span class="o">}</span>
+      <span class="o">}</span></code></pre>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-success">
+          <div class="content">
+            <p><strong>擅长</strong><em>Ai、Fw、Br、Ae、Pr、Id、Ps</em>等软件的安装与卸载，</p>
+            <p><strong>精通</strong><em>CSS、JavaScript、PHP、C、C++、C#、Java、Ruby、Perl、Lisp、Python、Objective-C、ActionScript</em>等单词的拼写，</p>
+            <p><strong>熟悉</strong><em>Windows、Linux、MacOS、IOS、Android</em>等系统的开关机，</p>
+            <p>学识渊博、经验丰富，</br>
+               代码风骚、效率恐怖，</br>
+               熟练掌握各种框架，深山苦练20余年，</br>
+               千里之外定位问题，瞬息之间修复上线，</br>
+               身体强壮、健步如飞，</br>
+               可连续编程100小时不休息，</br>
+               讨论技术方案5小时不喝水，</br>
+               上至带项目、出方案，</br>
+               下至盗账号、威胁pm，</br>
+               啥都能干，</br>
+               备用电源万兆光纤永不断电断网，</br>
+               门口已埋雷无人打扰。</p>
+            <p>求一份月薪上万的工作！</p>
+          </div>
+      </article>
+    </div>
+  </div>
