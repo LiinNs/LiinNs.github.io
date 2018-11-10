@@ -55,10 +55,5 @@ excerpt_separator: <!-- more -->
 defaults:
   - scope:
       path: ""
-      type: "posts"
-    values:
-      layout: "application"
-  - scope:
-      path: ""
     values:
       layout: "application"
