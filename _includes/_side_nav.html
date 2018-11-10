@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4x4">
+      <img src="/assets/images/avatar.jpg" alt="pika">
+    </figure>
+  </div>
+  <div class="card-content">
+     <h6 class="subtitle is-6">你被捕捉了，做我的宠物！</h6>
+  </div>
+</div>
+</br>
+<nav class="panel">
+  <p class="panel-heading">
+      分类
+  </p>
+  {% for category in site.categories %}
+    <a class="panel-block" href="/categories/{{category[0]}}">
+      <span class="panel-icon">
+        <i class="fas fa-book" aria-hidden="true"></i>
+      </span>
+      {{category[0]}}&nbsp;[{{category[1].size}}]
+    </a>
+  {% endfor %}
+</nav>
