@@ -50,7 +50,7 @@ highlighter: rouge
 host: 0.0.0.0
 paginate: 10
 paginate_path: "/page/:num/"
-excerpt_separator: <!--more-->
+excerpt_separator: <!-- more -->
 
 defaults:
   - scope:
