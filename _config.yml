@@ -18,7 +18,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   怎么回事儿，我就想做个大牛，顺便把钱挣了。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://liinns.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-path: "liinns.github.io"
+path: "https://liinns.github.io"
 # Build settings
 markdown: kramdown
 theme: minima
