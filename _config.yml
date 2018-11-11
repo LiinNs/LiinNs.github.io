@@ -52,6 +52,9 @@ paginate: 5
 paginate_path: "/page/:num/"
 excerpt_separator: <!-- more -->
 
+# enable disqus commemts
+comments: true
+
 defaults:
   - scope:
       path: ""
