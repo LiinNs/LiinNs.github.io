@@ -52,6 +52,13 @@ paginate: 5
 paginate_path: "/page/:num/"
 excerpt_separator: <!-- more -->
 
+side_categories:
+  - java
+  - ruby
+  - jekyll
+  - redis
+  - mysql
+
 # enable disqus commemts
 comments: true
 

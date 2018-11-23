@@ -1,7 +1,10 @@
 <nav class="breadcrumb is-small" aria-label="breadcrumbs">
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/page">Posts</a></li>
+    {% assign breadcrumbs = breadcrumb_string | split: ", " %} 
+    {% for crumb in breadcrumbs %}
+      {% assign crumbs = crumb | split: ":" %}
+      <li><a href="{{crumbs[0]}}">{{crumbs[1]}}</a></li>
+    {% endfor %}
     <li class="is-active"><a aria-current="page">{{page.title}}</a></li>
   </ul>
 </nav>

@@ -14,11 +14,15 @@
       分类
   </p>
   {% for category in site.categories %}
-    <a class="panel-block" href="/categories/{{category[0]}}">
-      <span class="panel-icon">
-        <i class="fas fa-book" aria-hidden="true"></i>
-      </span>
-      {{category[0]}}&nbsp;[{{category[1].size}}]
-    </a>
+  {% for item in site.side_categories %}
+    {% if item ==  category[0]%}
+      <a class="panel-block" href="/categories/{{category[0]}}">
+        <span class="panel-icon">
+          <i class="fas fa-book" aria-hidden="true"></i>
+        </span>
+        {{category[0]}}&nbsp;[{{category[1].size}}]
+      </a>
+    {% endif %}
+  {% endfor%}
   {% endfor %}
 </nav>

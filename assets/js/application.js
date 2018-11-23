@@ -8,6 +8,7 @@ $(function() {
   });
 
   $(".post-box").click(function(){
-    window.open($(this).attr("href"), "_brank");
+    // window.open($(this).attr("href"), "_brank");
+    window.location = $(this).attr("href");
   });
 });
