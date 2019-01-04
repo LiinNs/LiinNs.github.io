@@ -58,6 +58,8 @@ side_categories:
   - jekyll
   - redis
   - mysql
+  - scrapy
+  - javascript
 
 # enable disqus commemts
 comments: true
