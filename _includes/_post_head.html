@@ -6,7 +6,7 @@
     <span class="icon is-small">
       <i class="fas fa-calendar-alt"></i>
     </span>
-    {{ page.date }}
+    {{ page.date | date: "%a, %Y-%m-%d" }}
   </time>
   <author>
       <span class="icon is-small">
