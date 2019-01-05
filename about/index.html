@@ -2,6 +2,11 @@
 layout: application
 title: 关于LiinNs
 ---
+<style>
+  .highlight pre {
+    margin: 0;
+  }
+</style>
 <div class="tile is-ancestor">
     <div class="tile is-vertical is-8">
       <div class="tile">
@@ -26,20 +31,19 @@ title: 关于LiinNs
       </div>
       <div class="tile is-parent">
         <article class="tile is-child notification is-info">
-            <pre class="highlight">
-      <code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">try</span> <span class="o">{</span>
-          <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">num</span><span class="o">));</span>
-          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
-        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-        <span class="o">}</span>
-      <span class="o">}</span>
-      <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="o">{</span><span class="mi">11</span><span class="o">,</span> <span class="mi">998</span><span class="o">,</span> <span class="mi">1024</span><span class="o">,</span> <span class="mi">520</span><span class="o">,</span> <span class="mi">996</span><span class="o">,</span> <span class="mi">1314</span><span class="o">,</span> <span class="mi">69</span><span class="o">};</span></span>
-        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="o">.</span><span class="na">lenght</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-          <span class="k">new</span> <span class="nf">Thread</span><span class="o">(</span><span class="k">new</span> <span class="n">ArraySort</span><span class="o">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">])).</span><span class="na">start</span><span class="o">();</span>
-        <span class="o">}</span>
-      <span class="o">}</span></code></pre>
+    {% highlight ruby %}
+    # 估值1亿的人工智能代码
+    irb(main):001:0> loop do
+    irb(main):002:1*     input = gets.chomp
+    irb(main):003:1>     puts input.gsub(/(吗)?(\?|？)/,'!').gsub(/你/,'我')
+    irb(main):004:1> end
+    你在吗？
+    我在!
+    你能听得懂汉语吗？
+    我能听得懂汉语!
+    真的 ？
+    真的!
+    {% endhighlight %}
         </article>
       </div>
     </div>
