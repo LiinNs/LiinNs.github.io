@@ -1,0 +1,15 @@
+---
+title: javascript分类
+---
+{% assign breadcrumb_string = "/:Home, /page:Posts" %}
+{% include _bread_crumb.html %}
+{% for category in site.categories %}
+{% if category[0] == 'javascript' %}
+  <div class="notification is-light">
+    <strong>{{category[0]}}</strong> 分类下的文章
+  </div>
+  {% for post in category[1] %}
+    {% include _post.html %}
+  {% endfor %}
+{% endif %}
+{% endfor %}

@@ -5,10 +5,11 @@
   </head>
   <body>
     {% include _nav.html %}
-    <section class="section">
+    <section class="section post">
       <div class="container">
         {% assign breadcrumb_string = "/:Home, /page:Posts" %} 
         {% include _bread_crumb.html %}
+        {% include _post_head.html %}
         {{content}}
         {% include _disqus.html %}
       </div>
