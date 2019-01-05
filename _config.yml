@@ -59,6 +59,7 @@ side_categories:
   - mysql
   - scrapy
   - javascript
+  - nginx
 
 # enable disqus commemts
 comments: true
