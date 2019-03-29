@@ -11,7 +11,7 @@ puppeteer_skip_chromium_download=true
 Or
 npm config set puppeteer_skip_chromium_download true -g
 {% end highlight %}
-
+<!-- more -->
 2. Use mirro to download
 {% highlight ruby linenos %}
 vim .npmrc
