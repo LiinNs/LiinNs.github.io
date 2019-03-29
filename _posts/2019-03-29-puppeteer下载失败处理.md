@@ -10,14 +10,14 @@ vim .npmrc
 puppeteer_skip_chromium_download=true
 Or
 npm config set puppeteer_skip_chromium_download true -g
-{% end highlight %}
+{% endhighlight %}
 <!-- more -->
 2. Use mirro to download
 {% highlight ruby linenos %}
 vim .npmrc
 # add this line
 type puppeteer_download_host = https://npm.taobao.org/mirrors
-{% end highlight %}
+{% endhighlight %}
 
 3. Just skip download puppeteer
 env PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm i puppeteer -D
@@ -28,7 +28,7 @@ Then view the needed reversion from /node_modules/puppeteer/package.json
 "puppeteer": {
   "chromium_revision": "637110"
 }
-{% end highlight %}
+{% endhighlight %}
 Download it from https://npm.taobao.org/mirrors/chromium-browser-snapshots/
 
 And at last unzip it under `/node_modules/puppeteer.local-chromium/mac-637110/chrome-mac/` as below
