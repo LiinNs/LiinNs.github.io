@@ -1,6 +1,6 @@
 ---
-categories: javascript
-tags: [nodejs, node, javascript, 无头浏览器, puppeteer]
+categories: nginx
+tags: [nginx, 日志分片处理, logrotate]
 comments: true
 ---
 1. monthly: 日志文件将按月轮循。其它可用值为‘daily’，‘weekly’或者‘yearly’。
