@@ -80,7 +80,7 @@ Foo.new
  ![ivar_rel](/assets/images/ivar_rel.png)  
 类会指向一个被称为"IV index Table"的"names to indexs"映射。IV index Table会成对的包含实例变量的名称及其对应的查找该实例变量的索引在其中。  
 相关实例将指向类，并指向实际包含实例变量值的一个数组。  
-为什么要不辞辛苦的将实例变量的名称映射到数组偏移量呢？因为访问数组元素比从哈希查找所需的内容要快得多。我们有时确实需要从哈希中查找数组的元素（实例变量的索引），但实例变量具有自己的内联缓存，因此不是每次都需要执行一次哈希查寻。  
+为什么要不辞辛苦的将实例变量的名称映射到数组偏移量呢？因为访问数组元素比从哈希查找所需的内容要快得多。我们有时确实需要从哈希中查找数组的元素（实例变量的索引），但实例变量具有自己的[内联缓存](http://tenderlovemaking.com/2015/12/23/inline-caching-in-mri.html)，因此不是每次都需要执行一次哈希查寻。  
 
 
 ### 在动画中演示实例变量的设置(Setting Instance Variables in Slow Motion)
@@ -108,7 +108,7 @@ Ruby 会延迟创建实例变量索引表，因此直到代码第一次执行它
 现在，让我们来看看第二次调用`Foo.new`时会发生什么:  
  ![ivar](/assets/images/ivar_second_time.gif)
 这一次，这个类已经有一个与其关联的实例变量索引表（IV Index Table）。设置实例变量`@a`时，发现其已经存在于索引表，值为 0，因此我们将在实例变量列表中索引为 0的地方设置为"foo"。  
-当我们看到实例变量`@b`时,它在索引表中已经有一个位置为 1 的条目,因此我们将"柱"设置为在实例变量列表中的位置 1。  
+当我们看到实例变量`@b`时,它在索引表中已经有一个位置为 1 的条目,因此我们将"bar"设置为在实例变量列表中的位置 1。  
 方法中的每个实例变量重复会这个过程。  
 我们可以使用`ObjectSpace.memsize_of`来观察到索引表的延迟创建:  
 {% highlight ruby linenos %}
@@ -158,7 +158,7 @@ Foo.new false
 ### 实例变量列表的分配和扩容(Instance Variable List Allocation and Expansion)
 
 我们已经了解到实例变量索引表的创建方式。现在让我们专注于实例变量列表。这一列表与实例相关联，并保持着我们对实际实例变量值的引用。  
-此列表是延迟地分配和扩容，在它需要容纳更多的值的时候。链接内的源码描述了数组的容量会如何地增长。  
+此列表是延迟地分配和扩容，在它需要容纳更多的值的时候。[链接内的源码](https://github.com/ruby/ruby/blob/24c4e6dec109e105c13bd4c1b7f7cd51e534a3c3/variable.c#L947-L957)描述了数组的容量会如何地增长。  
 我已经将该函数转换为 Ruby 代码，并添加了一些注释:  
 {% highlight ruby linenos %}
 def iv_index_tbl_newsize(ivup)
